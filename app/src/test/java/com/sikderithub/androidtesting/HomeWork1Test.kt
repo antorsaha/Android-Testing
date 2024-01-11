@@ -24,14 +24,14 @@ class HomeWork1Test{
     fun fib9Returns34(){
         val result = HomeWork1.fib(9)
 
-        assertThat(result).isEqualTo(21)
+        assertThat(result).isEqualTo(34)
     }
 
     @Test
     fun fib10Returns55(){
         val result = HomeWork1.fib(10)
 
-        assertThat(result).isEqualTo(34)
+        assertThat(result).isEqualTo(55)
     }
 
     @Test
@@ -44,6 +44,13 @@ class HomeWork1Test{
     @Test
     fun invalidBracesReturnsFalse2(){
         val result = HomeWork1.checkBraces("((a * b)")
+
+        assertThat(result).isFalse()
+    }
+
+    @Test
+    fun invalidBracesReturnsFalse3(){
+        val result = HomeWork1.checkBraces(")(")
 
         assertThat(result).isFalse()
     }
